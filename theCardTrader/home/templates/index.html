@@ -76,38 +76,64 @@
 <body>
 
 <header>✨ TCG Cards Collection</header>
+<style id="u9y0lm">
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #0f172a;
+        color: #fff;
+    }
 
-<div class="container">
+    .menu {
+        max-width: 400px;
+        margin: 40px auto;
+        padding: 20px;
+        background: #1e293b;
+        border-radius: 12px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    }
 
-    <div class="card">
-        <span class="raridade comum">Comum</span>
-        <img src="https://picsum.photos/300/200?1">
-        <h2>Guerreiro da Terra</h2>
-        <p>Ataque: 120 | Defesa: 80</p>
-    </div>
+    .menu h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
 
-    <div class="card">
-        <span class="raridade rara">Rara</span>
-        <img src="https://picsum.photos/300/200?2">
-        <h2>Mago Arcano</h2>
-        <p>Ataque: 200 | Defesa: 50</p>
-    </div>
+    .menu a {
+        display: block;
+        padding: 12px;
+        margin: 8px 0;
+        text-decoration: none;
+        color: white;
+        background: #3b82f6;
+        border-radius: 8px;
+        text-align: center;
+        transition: 0.3s;
+    }
 
-    <div class="card">
-        <span class="raridade epica">Épica</span>
-        <img src="https://picsum.photos/300/200?3">
-        <h2>Dragão Sombrio</h2>
-        <p>Ataque: 350 | Defesa: 200</p>
-    </div>
+    .menu a:hover {
+        background: #2563eb;
+        transform: scale(1.03);
+    }
+</style>
 
-    <div class="card">
-        <span class="raridade lendaria">Lendária</span>
-        <img src="https://picsum.photos/300/200?4">
-        <h2>Fênix Celestial</h2>
-        <p>Ataque: 500 | Defesa: 300</p>
-    </div>
+<div class="menu">
+    <h2>📦 Card Trader</h2>
 
+    <!-- Cards -->
+    <a href="{% url 'lista_de_cartas' %}">📜 Lista de Cartas</a>
+    <a href="{% url 'detalhes_da_carta' %}">🔍 Detalhes da Carta</a>
+    <a href="{% url 'detalhes_do_deck' %}">🧩 Detalhes do Deck</a>
+
+    <!-- Auth -->
+    <a href="{% url 'login' %}">🔑 Login</a>
+    <a href="{% url 'cadastro' %}">📝 Cadastro</a>
+    <a href="{% url 'mudar_senha' %}">🔒 Mudar Senha</a>
+
+    <!-- Usuário -->
+    <a href="{% url 'dados_usuario' %}">👤 Dados do Usuário</a>
+    <a href="{% url 'historico_usuario' %}">📊 Histórico</a>
 </div>
+
+
 
 </body>
 </html>
