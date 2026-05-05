@@ -20,8 +20,34 @@ from django.urls import path
 #rotas de apps
 
 from home import views as views_principais
+from cards import views as cards
+from usuarios_auth import views as auth
+from usuarios_info import views as user_infos
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('principal/', views_principais.principal),
+    
+    #rotas da home
+    path('', views_principais.principal, name = 'home'),
+    
+    #rotas de cards
+    path('cartas/',cards.cartas, name='lista_de_cartas'),
+    path('detalhamento/carta/',cards.cartas_detalhamento,name='detalhes_da_carta'),
+    path('detalhamento/deck/',cards.decks_detalhamento,name='detalhes_do_deck'),
+    
+    #rotas para autenticação
+    
+    path('login/',auth.login, name='login'),
+    path('cadastro/',auth.criar_conta, name='cadastro'),
+    path('mudarsenha/',auth.trocar_senha, name='mudar_senha'),
+    
+    
+    
+    #rotas para informações do usuário
+    
+    path('usuario/',user_infos.dados_usuario, name='dados_usuario'),
+    path('usuario/historico/',user_infos.historico_usuario, name='historico_usuario'),
+    
+    
+    
 ]
