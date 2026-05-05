@@ -35,11 +35,14 @@ Usuário comum e administrador
 - Criar conta
 - Login
 - Recuperar senha
+------------------------------app 01
 - Configurações do perfil
 - Histórico de atividades
+-----------------------------app02
 - lista de cartas e decks
 - Detalhamento de carta 
 - Detalhamento de deck
+------------------------------app03
 
 
 ## Há algum motivo pessoal, acadêmico ou profissional que te incentivou a desenvolver esse sistema?
